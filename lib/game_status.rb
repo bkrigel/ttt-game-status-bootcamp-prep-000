@@ -23,9 +23,7 @@ def won?(board)
 end
 
 def full?(board)
-  WIN_COMBINATIONS.detect do |fullb|
-    (board[fullb[0]] == "X" || board[fullb[0]] == "O") &&
-    (board[fullb[1]] == "X" || board[fullb[1]] == "O") &&
-    (board[fullb[2]] == "X" || board[fullb[2]] == "O")
-    end
+  board.all? do |fullb|
+    fullb == "X" || fullb == "O"
+  end
 end
