@@ -14,6 +14,7 @@ WIN_COMBINATIONS = [
   [2,4,6]
 ]
 
+
 def won?(board)
   WIN_COMBINATIONS.detect do |winc|
     board[winc[0]] == board[winc[1]] &&
@@ -22,19 +23,23 @@ def won?(board)
   end
 end
 
+
 def full?(board)
   board.all? do |fullb|
     fullb == "X" || fullb == "O"
   end
 end
 
+
 def draw?(board)
   won?(board) == false && full?(board) == true
 end
 
+
 def over?(board)
   won?(board) == true || draw?(board) == true
 end
+
 
 def winner(board)
   if WIN_COMBINATIONS.detect do |winc|
@@ -42,7 +47,7 @@ def winner(board)
     board[winc[1]] == board[winc[2]] &&
     board[winc[0]] == "X"
     end
-    "X"
+    X
   elsif WIN_COMBINATIONS.detect do |winc|
     board[winc[0]] == board[winc[1]] &&
     board[winc[1]] == board[winc[2]] &&
