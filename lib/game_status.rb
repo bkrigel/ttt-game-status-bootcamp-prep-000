@@ -29,7 +29,9 @@ def full?(board)
     (board[fullb[2]] == "X" || board[fullb[2]] == "O")
     end
     true
-  else
+  else WIN_COMBINATIONS.detect do |fullb|
+    board[fullb[0]] == " " || board[fullb[1]] == " " || board[fullb[2]] == " "
+    end
     false
   end
 end
