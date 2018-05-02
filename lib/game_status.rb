@@ -43,11 +43,13 @@ def winner(board)
     board[winc[0]] == "X"
     end
     "X"
-  else WIN_COMBINATIONS.detect do |winc|
+  elsif WIN_COMBINATIONS.detect do |winc|
     board[winc[0]] == board[winc[1]] &&
     board[winc[1]] == board[winc[2]] &&
     board[winc[0]] == "O"
     end
     "O"
+  else
+    nil
   end
 end
