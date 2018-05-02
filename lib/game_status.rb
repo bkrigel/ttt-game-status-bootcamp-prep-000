@@ -23,10 +23,10 @@ def won?(board)
 end
 
 def full?(board)
-  if WIN_COMBINATIONS.detect do |fullb|
+  if (WIN_COMBINATIONS.detect do |fullb|
     (board[fullb[0]] == "X" || board[fullb[0]] == "O") &&
     (board[fullb[1]] == "X" || board[fullb[1]] == "O") &&
-    (board[fullb[2]] == "X" || board[fullb[2]] == "O")
+    (board[fullb[2]] == "X" || board[fullb[2]] == "O"))
     true
   else
     false
