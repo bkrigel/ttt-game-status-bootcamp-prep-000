@@ -47,7 +47,7 @@ def winner(board)
     board[winc[1]] == board[winc[2]] &&
     board[winc[0]] == "X"
     end
-    X
+    "X"
   elsif WIN_COMBINATIONS.detect do |winc|
     board[winc[0]] == board[winc[1]] &&
     board[winc[1]] == board[winc[2]] &&
