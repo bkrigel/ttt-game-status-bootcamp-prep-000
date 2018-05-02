@@ -13,3 +13,11 @@ WIN_COMBINATIONS = [
   [0,4,8],
   [2,4,6]
 ]
+
+def won?(board)
+  WIN_COMBINATIONS.detect do |winc|
+    board[winc[0]] == board[winc[1]] &&
+    board[winc[1]] == board[winc[2]] &&
+    (board[winc[0]] == "X" || board[winc[0]] == "O")
+  end
+end
