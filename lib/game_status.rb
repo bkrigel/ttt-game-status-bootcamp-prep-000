@@ -28,6 +28,7 @@ def full?(board)
     (board[fullb[1]] == "X" || board[fullb[1]] == "O") &&
     (board[fullb[2]] == "X" || board[fullb[2]] == "O")
     end
+    true
   else
     false
   end
