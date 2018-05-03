@@ -37,7 +37,7 @@ end
 
 
 def over?(board)
-  won?(board) == true || draw?(board) == true
+  (won?(board) == true || draw?(board) == true)
 end
 
 
