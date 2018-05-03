@@ -25,7 +25,7 @@ end
 
 
 def full?(board)
-  board.any? do |fullb|
+  board.all? do |fullb|
     fullb == "X" || fullb == "O"
   end
 end
